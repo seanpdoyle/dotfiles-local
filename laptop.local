@@ -1,0 +1,9 @@
+#!/bin/sh
+
+brew tap phinze/homebrew-cask
+brew install brew-cask
+
+brew cask install atom
+brew cask install dropbox
+brew cask install google-chrome
+brew cask install spotify

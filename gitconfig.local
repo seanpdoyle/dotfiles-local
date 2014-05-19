@@ -26,9 +26,5 @@
         prompt = false
 [help]
         autocorrect = 1
-
-[credential]
-# helper = /opt/boxen/bin/boxen-git-credential
-helper = /opt/boxen/homebrew/bin/git-credential-osxkeychain
 [heroku]
 	account = castequality
