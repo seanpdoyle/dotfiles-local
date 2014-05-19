@@ -1,4 +1,6 @@
-# dotfiles
+# dotfiles.local
+
+[dotfiles](https://github.com/thoughtbot/dotfiles) extensions
 
 # Install
 
