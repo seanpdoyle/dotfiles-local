@@ -1,4 +1,5 @@
 #!/bin/sh
+brew install coreutils
 
 brew tap phinze/homebrew-cask
 brew install brew-cask

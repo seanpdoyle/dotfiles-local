@@ -7,6 +7,6 @@ run the install task
 
 ```console
 $ hub clone seanpdoyle/dotfiles.local ~/.dotfiles
-$ cd ~/.dotfiles
+$ cd ~/.dotfiles.local
 $ rake install
 ```
