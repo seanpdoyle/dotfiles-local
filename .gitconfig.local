@@ -1,0 +1,34 @@
+[hub]
+        protocol = https
+[user]
+        name = Sean Doyle
+        email = sean.p.doyle24@gmail.com
+        helper = osxkeychain
+[alias]
+        co = checkout
+        promote = !$ZSH/bin/git-promote
+        wtf     = !$ZSH/bin/git-wtf
+        rank-contributers = !$ZSH/bin/git-rank-contributers
+        count   = !git shortlog -sn
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        ui = true
+[core]
+        excludesfile = /opt/boxen/config/git/gitignore
+        editor = vim
+[apply]
+        whitespace = nowarn
+[mergetool]
+        keepBackup = false
+[difftool]
+        prompt = false
+[help]
+        autocorrect = 1
+
+[credential]
+# helper = /opt/boxen/bin/boxen-git-credential
+helper = /opt/boxen/homebrew/bin/git-credential-osxkeychain
+[heroku]
+	account = castequality
