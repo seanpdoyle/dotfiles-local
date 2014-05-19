@@ -1,1 +1,20 @@
 #!/bin/zsh
+
+# shortcut to this dotfiles path is $ZSH
+export ZSH=$HOME/.dotfiles.local
+
+# your project folder that we can `c [tab]` to
+export PROJECTS=~/src
+
+# source every .zsh file in this rep
+for config_file ($ZSH/**/*.zsh) [[ "$(basename $config_file)" == "completion.zsh" ]] || source $config_file
+
+# initialize autocomplete here, otherwise functions won't be loaded
+autoload -U compinit
+compinit
+
+# load every completion after autocomplete loads
+for config_file ($ZSH/**/completion.zsh) source $config_file
+
+# added by travis gem
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
