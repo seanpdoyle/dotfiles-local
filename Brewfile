@@ -9,3 +9,4 @@ cask install dropbox
 cask install google-chrome
 cask install spotify
 cask install vlc
+cask install screenhero

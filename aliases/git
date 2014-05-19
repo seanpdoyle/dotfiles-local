@@ -1,5 +1,7 @@
 #!/bin/sh
 
+alias git='hub'
+
 alias g='git'
 alias ga='git aa'
 alias gl='git pull --prune'

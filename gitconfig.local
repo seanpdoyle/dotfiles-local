@@ -1,5 +1,5 @@
 [hub]
-        protocol = https
+        protocol = ssh
 [user]
         name = Sean Doyle
         email = sean.p.doyle24@gmail.com
@@ -16,7 +16,6 @@
         branch = auto
         ui = true
 [core]
-        excludesfile = /opt/boxen/config/git/gitignore
         editor = vim
 [apply]
         whitespace = nowarn
@@ -27,4 +26,4 @@
 [help]
         autocorrect = 1
 [heroku]
-	account = castequality
+        account = castequality
