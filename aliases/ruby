@@ -1,0 +1,5 @@
+#!/bin/sh
+
+alias be='bundle exec'
+alias fs='pkill -f unicorn; foreman start'
+

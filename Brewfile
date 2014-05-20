@@ -1,5 +1,8 @@
 install coreutils
 
+tap nviennot/tmate
+install tmate
+
 tap caskroom/homebrew-cask
 install brew-cask
 
@@ -10,3 +13,4 @@ cask install google-chrome
 cask install spotify
 cask install vlc
 cask install screenhero
+cask install sizeup

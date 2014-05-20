@@ -1,0 +1,3 @@
+
+map <Leader>a :call RunAllSpecs()<CR>
+set colorcolumn=80

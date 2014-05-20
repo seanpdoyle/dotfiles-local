@@ -1,3 +1,19 @@
 #!/bin/sh
 
 brew bundle ~/.dotfiles.local/Brewfile
+
+for version in 2.1.1 2.1.0 2.0.0-p353 2.0.0-p247; do
+  echo "Installing ruby version $version..."
+  echo
+
+  rbenv install $version --skip-existing
+
+  echo
+  echo "ruby $version installed!"
+done
+
+# Install pow
+if ! [ -d ~/.pow ]; then
+  curl get.pow.cx | sh
+fi
+

@@ -12,6 +12,11 @@
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
+# Map Caps Lock to Control
+for productId in 544 591 610; do
+  defaults -currentHost write -g "com.apple.keyboard.modifiermapping.1452-$productId-0" -array "<dict><key>HIDKeyboardModifierMappingDst</key><integer>2</integer><key>HIDKeyboardModifierMappingSrc</key><integer>0</integer></dict>"
+done
+
 # Menu bar: disable transparency
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
