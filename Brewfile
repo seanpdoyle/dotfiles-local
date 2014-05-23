@@ -1,4 +1,5 @@
 install coreutils
+install zsh-syntax-highlighting
 
 tap nviennot/tmate
 install tmate
@@ -14,3 +15,4 @@ cask install spotify
 cask install vlc
 cask install screenhero
 cask install sizeup
+cask install slack

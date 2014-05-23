@@ -1,3 +1,4 @@
-
-map <Leader>a :call RunAllSpecs()<CR>
 set colorcolumn=80
+
+map <Leader>i mmgg=G`m<CR>
+map <Leader>a :call RunAllSpecs()<CR>
