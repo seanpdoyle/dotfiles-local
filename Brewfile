@@ -1,5 +1,6 @@
 install coreutils
 install zsh-syntax-highlighting
+install ngrok
 
 tap nviennot/tmate
 install tmate
@@ -12,7 +13,8 @@ cask install atom
 cask install dropbox
 cask install google-chrome
 cask install spotify
-cask install vlc
 cask install screenhero
 cask install sizeup
 cask install slack
+cask install vlc
+cask install silverlight
