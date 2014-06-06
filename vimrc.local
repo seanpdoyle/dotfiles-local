@@ -1,4 +1,5 @@
 set colorcolumn=80
+set relativenumber
 
 map <Leader>i mmgg=G`m<CR>
 map <Leader>a :call RunAllSpecs()<CR>
