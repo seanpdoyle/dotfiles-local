@@ -1,5 +1,6 @@
 " Define bundles via GitHub repos
 
 Bundle 'ervandew/supertab'
-Bundle 'calebthompson/vim-whitewash'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'gabebw/vim-spec-runner'
+Bundle 'calebthompson/vim-whitewash'

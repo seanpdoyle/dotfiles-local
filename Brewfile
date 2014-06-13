@@ -1,6 +1,7 @@
 install coreutils
 install zsh-syntax-highlighting
 install ngrok
+install phantomjs
 
 tap nviennot/tmate
 install tmate

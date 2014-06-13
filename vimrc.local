@@ -3,3 +3,12 @@ set relativenumber
 
 map <Leader>i mmgg=G`m<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+
+" Use <Leader>t to run the current spec file.
+" map <Leader>t <Plug>RunCurrentSpecFile
+
+" Use <Leader>s to run the current line in a spec.
+" map <Leader>s <Plug>RunFocusedSpec
+
+" Use <Leader>l to explicitly run the most recent spec.
+" map <Leader>l <Plug>RunMostRecentSpec
