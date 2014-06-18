@@ -4,11 +4,9 @@ set relativenumber
 map <Leader>i mmgg=G`m<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
-" Use <Leader>t to run the current spec file.
-" map <Leader>t <Plug>RunCurrentSpecFile
+function RunKonachaSpec()
+  let command_string = "! clear && bin/rake konacha:run SPEC=" . expand('%:s?spec/javascripts/??')
+  execute command_string
+endfunction
 
-" Use <Leader>s to run the current line in a spec.
-" map <Leader>s <Plug>RunFocusedSpec
-
-" Use <Leader>l to explicitly run the most recent spec.
-" map <Leader>l <Plug>RunMostRecentSpec
+map <Leader>j :call RunKonachaSpec()<CR>

@@ -2,5 +2,5 @@
 
 Bundle 'ervandew/supertab'
 Bundle 'terryma/vim-multiple-cursors'
-Bundle 'gabebw/vim-spec-runner'
+Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'calebthompson/vim-whitewash'
