@@ -1,12 +1,12 @@
-require 'rake'
+require "rake"
 
-desc 'Install the dotfiles'
+desc "Install the dotfiles"
 task :install do
-  puts 'Setting reasonable OS X defaults'
+  puts "Setting reasonable OS X defaults"
   `./osx/defaults`
 
-  Dir['**{.local}'].each do |linkable|
-    file   = linkable.split('/').last
+  Dir["**{.local}"].each do |linkable|
+    file   = linkable.split("/").last
     target = "#{ ENV['HOME'] }/.#{ file }"
 
     if File.exists?(target)
