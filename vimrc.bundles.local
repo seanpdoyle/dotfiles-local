@@ -1,7 +1,8 @@
 " Define bundles via GitHub repos
 
-Bundle 'ervandew/supertab'
-Bundle 'dag/vim2hs'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'calebthompson/vim-whitewash'
+Bundle 'dag/vim2hs'
+Bundle 'ervandew/supertab'
+Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'rking/ag.vim'
+Bundle 'terryma/vim-multiple-cursors'

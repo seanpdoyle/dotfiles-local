@@ -1,8 +1,9 @@
 install coreutils
-install zsh-syntax-highlighting
+install haskell-platform
+install mysql
 install ngrok
 install phantomjs
-install haskell-platform
+install zsh-syntax-highlighting
 
 tap nviennot/tmate
 install tmate
@@ -10,13 +11,13 @@ install tmate
 tap caskroom/homebrew-cask
 install brew-cask
 
-cask install onepassword
 cask install atom
 cask install dropbox
 cask install google-chrome
-cask install spotify
+cask install onepassword
 cask install screenhero
+cask install silverlight
 cask install sizeup
 cask install slack
+cask install spotify
 cask install vlc
-cask install silverlight
