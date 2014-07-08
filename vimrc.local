@@ -1,5 +1,5 @@
-set colorcolumn=80
-set relativenumber
+command! Q q " Bind :Q to :q
+command! W w " Bind :W to :w
 
 map <Leader>i mmgg=G`m<CR>
 map <Leader>a :call RunAllSpecs()<CR>
