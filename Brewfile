@@ -9,6 +9,7 @@ tap nviennot/tmate
 install tmate
 
 tap caskroom/homebrew-cask
+unlink brew-cask
 install brew-cask
 
 cask install atom
