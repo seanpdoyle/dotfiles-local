@@ -8,8 +8,10 @@ install zsh-syntax-highlighting
 tap nviennot/tmate
 install tmate
 
+tap thoughtbot/formulae
+install liftoff
+
 tap caskroom/homebrew-cask
-unlink brew-cask
 install brew-cask
 
 cask install atom
