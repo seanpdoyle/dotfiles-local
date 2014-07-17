@@ -1,3 +1,5 @@
+[init]
+        templatedir = ~/.git_template
 [hub]
         protocol = ssh
 [user]
@@ -10,6 +12,7 @@
         wtf     = !$ZSH/bin/git-wtf
         rank-contributers = !$ZSH/bin/git-rank-contributers
         count   = !git shortlog -sn
+        ctags = !.git/hooks/ctags
 [color]
         diff = auto
         status = auto
