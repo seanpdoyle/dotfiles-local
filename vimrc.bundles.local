@@ -1,6 +1,7 @@
 " Define bundles via GitHub repos
 
 Bundle 'calebthompson/vim-whitewash'
+Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'dag/vim2hs'
 Bundle 'ervandew/supertab'
 Bundle 'mustache/vim-mustache-handlebars'

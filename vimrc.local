@@ -1,4 +1,5 @@
 command! Q q " Bind :Q to :q
+command! Qa qa " Bind :Qa to :qa
 command! W w " Bind :W to :w
 
 map <Leader>i mmgg=G`m<CR>
