@@ -4,11 +4,11 @@
 
 # Install
 
-First, clone the repository into your `$HOME` directory as `.dotfiles`, then
-run the install task
+First, clone the repository into your `$HOME` directory as `.dotfiles.local`.
+Then run the `install` task
 
 ```console
-$ hub clone seanpdoyle/dotfiles.local ~/.dotfiles
+$ git clone https://github.com/seanpdoyle/dotfiles.local ~/.dotfiles.local
 $ cd ~/.dotfiles.local
 $ rake install
 ```

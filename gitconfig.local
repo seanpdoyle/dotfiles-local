@@ -1,32 +1,28 @@
 [init]
-        templatedir = ~/.git_template
-[hub]
-        protocol = ssh
+  templatedir = ~/.git_template
 [user]
-        name = Sean Doyle
-        email = sean.p.doyle24@gmail.com
-        helper = osxkeychain
+  name = Sean Doyle
+  email = sean.p.doyle24@gmail.com
 [alias]
-        co = checkout
-        promote = !$ZSH/bin/git-promote
-        wtf     = !$ZSH/bin/git-wtf
-        rank-contributers = !$ZSH/bin/git-rank-contributers
-        count   = !git shortlog -sn
-        ctags = !.git/hooks/ctags
+  co = checkout
+  promote = !$ZSH/bin/git-promote
+  wtf     = !$ZSH/bin/git-wtf
+  rank-contributers = !$ZSH/bin/git-rank-contributers
+  count   = !git shortlog -sn
 [color]
-        diff = auto
-        status = auto
-        branch = auto
-        ui = true
+  diff = auto
+  status = auto
+  branch = auto
+  ui = true
 [core]
-        editor = vim
+  editor = vim
 [apply]
-        whitespace = nowarn
+  whitespace = nowarn
 [mergetool]
-        keepBackup = false
+  keepBackup = false
 [difftool]
-        prompt = false
+  prompt = false
 [help]
-        autocorrect = 1
+  autocorrect = 1
 [heroku]
-        account = castequality
+  account = castequality

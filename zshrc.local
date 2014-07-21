@@ -7,6 +7,8 @@ export ZSH=$HOME/.dotfiles.local
 export PROJECTS=~/src
 export CDPATH=$HOME:$PROJECTS
 
+mkdir -p $PROJECTS
+
 # source every .zsh file in this rep
 for config_file ($ZSH/**/*.zsh) [[ "$(basename $config_file)" == "completion.zsh" ]] || source $config_file
 
