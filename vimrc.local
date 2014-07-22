@@ -3,7 +3,7 @@ command! Qa qa " Bind :Qa to :qa
 command! W w " Bind :W to :w
 
 map <Leader>i mmgg=G`m<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+map <Leader>a :!rake<CR>
 
 function RunKonachaSpec()
   let command_string = "! clear && bin/rake konacha:run SPEC=" . expand('%:s?spec/javascripts/??')
@@ -11,3 +11,8 @@ function RunKonachaSpec()
 endfunction
 
 map <Leader>j :call RunKonachaSpec()<CR>
+
+map <Leader>t <Plug>RunCurrentSpecFile
+map <Leader>s <Plug>RunFocusedSpec
+map <Leader>l <Plug>RunMostRecentSpec
+
