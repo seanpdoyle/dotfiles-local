@@ -28,9 +28,10 @@ task :os_x_defaults do
 end
 
 desc "Install system dependencies"
-task :homebrew do
+task :brew do
   system "brew bundle"
 end
+task :homebrew => :brew
 
 desc "Install the dotfiles"
 task :install => [:locals, :os_x_defaults, :homebrew, :laptop]

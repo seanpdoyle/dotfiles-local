@@ -25,4 +25,4 @@
 [help]
   autocorrect = 1
 [heroku]
-  account = castequality
+  account = thoughtbot

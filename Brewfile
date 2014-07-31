@@ -1,3 +1,5 @@
+update
+
 install caskroom/cask/brew-cask
 
 cask install dropbox
@@ -15,8 +17,7 @@ install ngrok
 install phantomjs
 install zsh-syntax-highlighting
 
-tap nviennot/tmate
-install tmate
+install nviennot/tmate/tmate
 
 install ghc --build-from-source
 install haskell-platform
