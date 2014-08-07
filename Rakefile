@@ -3,7 +3,7 @@ require "fileutils"
 
 desc "run laptop.local"
 task :laptop do
-  system "./laptop.local"
+  system "bash laptop.local"
 end
 
 desc "Link into home directory"

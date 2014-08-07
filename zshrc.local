@@ -7,6 +7,8 @@ export PROJECTS=~/src
 
 mkdir -p $PROJECTS
 
+cd $PROJECTS
+
 # source every .zsh file in this rep
 for config_file ($ZSH/**/*.zsh) [[ "$(basename $config_file)" == "completion.zsh" ]] || source $config_file
 
