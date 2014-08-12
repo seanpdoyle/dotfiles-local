@@ -5,6 +5,7 @@
   email = sean.p.doyle24@gmail.com
 [alias]
   co = checkout
+  rebae = rebase
   promote = !$ZSH/bin/git-promote
   wtf     = !$ZSH/bin/git-wtf
   rank-contributers = !$ZSH/bin/git-rank-contributers
