@@ -1,5 +1,13 @@
 #!/bin/sh
 
+npm_packages=(
+  bower
+  ember-cli
+)
+for package in $npm_packages; do
+  npm -g install $package
+done
+
 for version in 2.1.1 2.1.0 2.0.0-p353 2.0.0-p247; do
   echo "Installing ruby version $version..."
   echo
