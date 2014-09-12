@@ -21,7 +21,6 @@ task :locals do
   end
 end
 
-desc "Assign OS X defaults"
 task :os_x_defaults do
   puts "Setting reasonable OS X defaults"
   system "./osx/defaults"
