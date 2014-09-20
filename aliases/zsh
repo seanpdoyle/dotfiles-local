@@ -2,3 +2,6 @@
 
 alias reload!='source ~/.zshrc'
 alias grep='grep --color'
+alias :q='exit'
+alias :Q='exit'
+alias :x='exit'

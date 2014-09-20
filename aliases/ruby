@@ -2,4 +2,4 @@
 
 alias be='bundle exec'
 alias fs='pkill -f unicorn; foreman start'
-alias clean='rake db:{drop,create,migrate} dev:prime db:test:prepare'
+alias clean='rake db:{drop,create,migrate,seed} dev:prime db:test:prepare'
