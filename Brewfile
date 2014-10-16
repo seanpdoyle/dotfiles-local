@@ -5,11 +5,11 @@ install caskroom/cask/brew-cask
 cask install dropbox
 cask install google-chrome
 cask install gpgtools
+cask install licecap
 cask install onepassword
 cask install screenhero
 cask install silverlight
 cask install slack
-cask install propane
 cask install spectacle
 cask install spotify
 cask install vlc

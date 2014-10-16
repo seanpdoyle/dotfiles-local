@@ -23,3 +23,4 @@ if ! [ -d ~/.pow ]; then
   curl get.pow.cx | sh
 fi
 
+brew tap homebrew/boneyard

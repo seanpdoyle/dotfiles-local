@@ -1,7 +1,3 @@
-if command -v hookup > /dev/null; then
-  hookup post-checkout "$@"
-else
-  [ -f Gemfile ] && bundle install > /dev/null &
+[ -f Gemfile ] && bundle install > /dev/null &
 
-  [ -f db/schema.rb ] && bin/rake db:migrate > /dev/null &
-fi
+[ -f db/schema.rb ] && bin/rake db:migrate > /dev/null &

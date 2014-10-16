@@ -9,6 +9,7 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'rking/ag.vim'
+Plugin 'rust-lang/rust', {'rtp': 'src/etc/vim'}
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-unimpaired'
