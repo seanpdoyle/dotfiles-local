@@ -2,8 +2,6 @@ command! Q q " Bind :Q to :q
 command! Qa qa " Bind :Qa to :qa
 command! W w " Bind :W to :w
 
-let g:mustache_abbreviations = 1
-
 map <Leader><CR> :let g:spec_runner_dispatcher = '!bundle exec {command}'<CR>
 
 map <Leader>i mmgg=G`m<CR>

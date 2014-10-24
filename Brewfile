@@ -5,8 +5,8 @@ install caskroom/cask/brew-cask
 cask install dropbox
 cask install google-chrome
 cask install gpgtools
-cask install licecap
 cask install onepassword
+cask install postgres
 cask install screenhero
 cask install silverlight
 cask install slack
