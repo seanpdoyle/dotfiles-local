@@ -6,8 +6,9 @@ export ZSH=$HOME/.dotfiles.local
 export PROJECTS=~/src
 
 mkdir -p $PROJECTS
-
 cd $PROJECTS
+
+unsetopt flowcontrol
 
 # source every .zsh file in this rep
 for config_file ($ZSH/**/*.zsh) [[ "$(basename $config_file)" == "completion.zsh" ]] || source $config_file
@@ -29,3 +30,5 @@ fi
 
 # Oracle setup
 [ -f $HOME/.dotfiles.local/oracle ] && source $HOME/.dotfiles.local/oracle
+
+eval "$(hub alias -s)"

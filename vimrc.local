@@ -1,20 +1,18 @@
+" Color scheme
+colorscheme github
+highlight NonText guibg=#060606
+highlight Folded  guibg=#0A0A0A guifg=#9090D0
+
+let g:syntastic_html_checkers = []
+
 command! Q q " Bind :Q to :q
 command! Qa qa " Bind :Qa to :qa
 command! W w " Bind :W to :w
 
-map <Leader><CR> :let g:spec_runner_dispatcher = '!bundle exec {command}'<CR>
+map <Leader><CR> :let g:rspec_command = "!bundle exec rspec {spec}"<CR>
 
 map <Leader>i mmgg=G`m<CR>
-map <Leader>a :!rake<CR>
 
-function RunKonachaSpec()
-  let command_string = "! clear && bin/rake konacha:run SPEC=" . expand('%:s?spec/javascripts/??')
-  execute command_string
-endfunction
-
-map <Leader>j :call RunKonachaSpec()<CR>
-
-map <Leader>t <Plug>RunCurrentSpecFile
-map <Leader>s <Plug>RunFocusedSpec
-map <Leader>l <Plug>RunMostRecentSpec
-
+" save buffer with <C-s>
+map <C-s> <esc>:w<CR>
+imap <C-s> <esc>:w<CR>

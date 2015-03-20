@@ -2,10 +2,12 @@
 
 Plugin 'calebthompson/vim-whitewash'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'ConradIrwin/vim-bracketed-paste'
+Plugin 'croaky/vim-colors-github'
 Plugin 'dag/vim2hs'
 Plugin 'ervandew/supertab'
-Plugin 'gabebw/vim-spec-runner'
 Plugin 'garbas/vim-snipmate'
+Plugin 'jamestomasino/vim-writingsyntax'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'rking/ag.vim'
