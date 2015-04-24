@@ -18,9 +18,10 @@ for version in 2.1.1 2.1.0 2.0.0-p353 2.0.0-p247; do
   echo "ruby $version installed!"
 done
 
-# Install pow
-if ! [ -d ~/.pow ]; then
-  curl get.pow.cx | sh
-fi
+brew tap Homebrew/bundle
 
-brew tap homebrew/boneyard
+brew install haskell-platform
+brew unlink haskell-platform
+brew install cabal-install
+
+brew bundle

@@ -1,38 +1,37 @@
-update
+tap 'gapple/services'
+tap 'thoughtbot/formulae'
 
-tap gapple/services
-install caskroom/cask/brew-cask
+cask 'dropbox'
+cask 'flux'
+cask 'firefox'
+cask 'google-chrome'
+cask 'gpgtools'
+cask 'java'
+cask 'licecap'
+cask 'onepassword'
+cask 'postgres'
+cask 'screenhero'
+cask 'silverlight'
+cask 'slack'
+cask 'spectacle'
+cask 'spotify'
+cask 'vagrant'
+cask 'virtualbox'
+cask 'vlc'
 
-cask install dropbox
-cask install flux
-cask install firefox
-cask install google-chrome
-cask install gpgtools
-cask install java
-cask install onepassword
-cask install postgres
-cask install screenhero
-cask install silverlight
-cask install slack
-cask install spectacle
-cask install spotify
-cask install vagrant
-cask install virtualbox
-cask install vlc
+brew 'coreutils'
+brew 'gpg2'
+brew 'gpgme'
+brew 'forego'
+brew 'iojs'
+brew 'mysql'
+brew 'ngrok'
+brew 'parity'
+brew 'phantomjs'
+brew 'reattach-to-user-namespace'
+brew 'solr'
+brew 'tree'
+brew 'watchman'
+brew 'zsh-syntax-highlighting'
 
-install coreutils
-install gpg2
-install gpgme
-install mysql
-install ngrok
-install phantomjs
-install solr
-install tree
-install watchman
-install zsh-syntax-highlighting
-
-install nviennot/tmate/tmate
-
-install haskell-platform
-unlink haskell-platform
-install cabal-install
+brew 'nviennot/tmate/tmate'
