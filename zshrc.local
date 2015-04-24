@@ -6,7 +6,6 @@ export ZSH=$HOME/.dotfiles.local
 export PROJECTS=~/src
 
 mkdir -p $PROJECTS
-cd $PROJECTS
 
 unsetopt flowcontrol
 

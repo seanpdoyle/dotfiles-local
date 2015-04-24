@@ -14,4 +14,6 @@ Plugin 'rking/ag.vim'
 Plugin 'rust-lang/rust', {'rtp': 'src/etc/vim'}
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tomtom/tlib_vim'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-unimpaired'

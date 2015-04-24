@@ -2,8 +2,8 @@
 
 [ -f Gemfile ] && bundle install > /dev/null &
 
-if [ -f db/schema.rb ]; then
-  if [ -f bin/rake ]; then
-    bin/rake db:migrate > /dev/null &
-  fi
-fi
+# if [ -f db/schema.rb ]; then
+#   if [ -f bin/rake ]; then
+#     bin/rake db:migrate > /dev/null &
+#   fi
+# fi
