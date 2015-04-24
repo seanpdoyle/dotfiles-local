@@ -4,15 +4,22 @@ highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
 let g:syntastic_html_checkers = []
+let g:rspec_command = "Dispatch bin/rspec {spec}"
+
+" Terminal.app keeps having a notification and "jumping" on the dock from Vim's
+" bells, and this disables terminal Vim's bells.
+" http://vim.wikia.com/wiki/Disable_beeping
+set noerrorbells visualbell t_vb=
+
+autocmd VimResized * :wincmd =
 
 command! Q q " Bind :Q to :q
 command! Qa qa " Bind :Qa to :qa
 command! W w " Bind :W to :w
 
-map <Leader><CR> :let g:rspec_command = "!bundle exec rspec {spec}"<CR>
+map <Leader><CR> :let g:rspec_command = "Dispatch bundle exec rspec {spec}"<CR>
+
+nnoremap <Leader>- :wincmd _<CR>:wincmd \|<CR>
+nnoremap <Leader>= :wincmd =<CR>
 
 map <Leader>i mmgg=G`m<CR>
-
-" save buffer with <C-s>
-map <C-s> <esc>:w<CR>
-imap <C-s> <esc>:w<CR>
