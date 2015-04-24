@@ -1,5 +1,5 @@
 #!/bin/sh
 
 alias be='bundle exec'
-alias fs='pkill -f unicorn; foreman start'
+alias fs='pkill -f unicorn; forego start'
 alias clean='rake db:{drop,create,migrate,seed} dev:prime db:test:prepare'
