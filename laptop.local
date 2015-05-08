@@ -25,3 +25,5 @@ brew unlink haskell-platform
 brew install cabal-install
 
 brew bundle
+
+boot2docker init

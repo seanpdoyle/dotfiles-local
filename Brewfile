@@ -19,6 +19,7 @@ cask 'vagrant'
 cask 'virtualbox'
 cask 'vlc'
 
+brew 'boot2docker'
 brew 'coreutils'
 brew 'gpg2'
 brew 'gpgme'
