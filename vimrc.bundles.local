@@ -2,7 +2,6 @@
 
 Plug 'calebthompson/vim-whitewash'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'christoomey/vim-tmux-runner'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'croaky/vim-colors-github'
 Plug 'dag/vim2hs'

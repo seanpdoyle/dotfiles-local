@@ -41,3 +41,6 @@ ensure_tmux_is_running() {
 }
 
 ensure_tmux_is_running
+
+export PATH="$PATH:/usr/local/lib/node_modules"
+source $(brew --prefix nvm)/nvm.sh
