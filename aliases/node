@@ -1,3 +1,0 @@
-#!/bin/sh
-
-alias nombom='rm -rf bower_components dist node_modules tmp'

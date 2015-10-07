@@ -1,5 +1,5 @@
 #!/bin/sh
 
-for file in ~/.dotfiles.local/aliases/*; do
+for file in $HOME/.zsh-aliases/*; do
   source $file
 done

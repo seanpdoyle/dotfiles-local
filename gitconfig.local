@@ -1,7 +1,6 @@
 [user]
   name = Sean Doyle
   email = sean.p.doyle24@gmail.com
-  signingKey = Sean Doyle <seandoyle@thoughtbot.com>
 [alias]
   rebae = rebase
 [color]
@@ -9,8 +8,6 @@
   status = auto
   branch = auto
   ui = true
-[commit]
-  gpgsign = true
 [core]
   editor = vim
 [apply]

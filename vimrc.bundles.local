@@ -11,7 +11,7 @@ Plug 'jamestomasino/vim-writingsyntax'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'rking/ag.vim'
-Plug 'rust-lang/rust', {'rtp': 'src/etc/vim'}
+" Plug 'rust-lang/rust', {'rtp': 'src/etc/vim'}
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-dispatch'

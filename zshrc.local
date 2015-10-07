@@ -1,7 +1,5 @@
 #!/bin/zsh
 
-# shortcut to this dotfiles path is $ZSH
-export ZSH=$HOME/.dotfiles.local
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/src
 
@@ -9,15 +7,9 @@ mkdir -p $PROJECTS
 
 unsetopt flowcontrol
 
-# source every .zsh file in this rep
-for config_file ($ZSH/**/*.zsh) [[ "$(basename $config_file)" == "completion.zsh" ]] || source $config_file
-
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
-
-# load every completion after autocomplete loads
-for config_file ($ZSH/**/completion.zsh) source $config_file
 
 # Turn on ZSH syntax highlighting
 if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
@@ -26,9 +18,6 @@ fi
 
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
-
-# Oracle setup
-[ -f $HOME/.dotfiles.local/oracle ] && source $HOME/.dotfiles.local/oracle
 
 eval "$(hub alias -s)"
 
@@ -44,3 +33,6 @@ ensure_tmux_is_running
 
 export PATH="$PATH:/usr/local/lib/node_modules"
 source $(brew --prefix nvm)/nvm.sh
+
+export PATH="$HOME/.bin:$PATH"
+eval "$(rbenv init - --no-rehash zsh)"

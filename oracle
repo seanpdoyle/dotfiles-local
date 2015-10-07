@@ -1,6 +1,0 @@
-export LD_LIBRARY_PATH="/usr/local/oracle/instantclient_11_2"
-export DYLD_LIBRARY_PATH="/usr/local/oracle/instantclient_11_2"
-export SQLPATH="/usr/local/oracle/instantclient_11_2"
-export NLS_LANG="AMERICAN_AMERICA.UTF8"
-export PATH=$PATH:$DYLD_LIBRARY_PATH
-export ORACLE_HOME=/usr/local/oracle

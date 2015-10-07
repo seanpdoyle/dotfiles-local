@@ -19,10 +19,19 @@ command! W w " Bind :W to :w
 
 map <Leader><CR> :let g:rspec_command = "Dispatch bundle exec rspec {spec}"<CR>
 
+map <Leader>tq :!./node_modules/.bin/qunit -c index.js -t %<CR>
+
 nnoremap <Leader>- :wincmd _<CR>:wincmd \|<CR>
 nnoremap <Leader>= :wincmd =<CR>
 
 map <Leader>i mmgg=G`m<CR>
+nmap _ -
 
 " Insert a pry statement
 nmap <leader>bp orequire 'pry'; binding.pry<esc>^
+
+" Insert a pauseTest statement
+nmap <leader>pt oreturn pauseTest();<esc>:w<CR>
+
+" bind K to grep word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
