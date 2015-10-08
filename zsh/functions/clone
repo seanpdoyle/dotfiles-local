@@ -1,0 +1,11 @@
+function clone() {
+  local project=$1
+  local directory=$(echo $project | awk -F '[/]' '{print $2}')
+  local repository="$PROJECTS/$directory"
+
+  if ! [ -d $repository ]; then
+    hub clone $project $repository
+  fi
+
+  cd $repository
+}
