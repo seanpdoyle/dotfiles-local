@@ -35,3 +35,20 @@ nmap <leader>pt oreturn pauseTest();<esc>:w<CR>
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+let g:projectionist_heuristics = {
+      \ "spec/*": {
+      \   "spec/support/api/schemas/*.json": {
+      \     "type": "json",
+      \     "template": [
+      \     "{",
+      \     "  \"type\": \"object\",",
+      \     "  \"required\": [",
+      \     "  ],",
+      \     "  \"properties\": {",
+      \     "  }",
+      \     "}",
+      \     ]
+      \   }
+      \ }
+      \}
