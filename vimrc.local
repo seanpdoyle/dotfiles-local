@@ -41,14 +41,82 @@ let g:projectionist_heuristics = {
       \   "spec/support/api/schemas/*.json": {
       \     "type": "json",
       \     "template": [
-      \     "{",
-      \     "  \"type\": \"object\",",
-      \     "  \"required\": [",
-      \     "  ],",
-      \     "  \"properties\": {",
-      \     "  }",
-      \     "}",
+      \       "{",
+      \       "  \"type\": \"object\",",
+      \       "  \"required\": [",
+      \       "  ],",
+      \       "  \"properties\": {",
+      \       "  }",
+      \       "}",
       \     ]
       \   }
-      \ }
+      \ },
+      \ "ember-cli-build.js": {
+      \   "app/routes/*.js": {
+      \     "type": "route",
+      \     "template": [
+      \       "import Ember from 'ember';",
+      \       "",
+      \       "export default Ember.Route.extend({",
+      \       "});",
+      \     ],
+      \     "alternate": "app/templates/{}.hbs"
+      \   },
+      \   "app/controllers/*.js": {
+      \     "type": "controller",
+      \     "template": [
+      \       "import Ember from 'ember';",
+      \       "",
+      \       "export default Ember.Controller.extend({",
+      \       "});",
+      \     ],
+      \     "alternate": "app/templates/{}.hbs"
+      \   },
+      \   "app/components/*.js": {
+      \     "type": "component",
+      \     "template": [
+      \       "import Ember from 'ember';",
+      \       "",
+      \       "export default Ember.Component.extend({",
+      \       "});",
+      \     ],
+      \     "alternate": "app/templates/components/{}.hbs"
+      \   },
+      \   "app/templates/*.js": {
+      \     "type": "template",
+      \     "template": [
+      \       "{{outlet}}",
+      \     ]
+      \   },
+      \   "app/models/*.js": {
+      \     "type": "model",
+      \     "template": [
+      \       "import DS from 'ember-data';",
+      \       "",
+      \       "export default DS.Model.extend({",
+      \       "});",
+      \     ],
+      \     "alternate": "app/adapters/{}.js"
+      \   },
+      \   "app/adapters/*.js": {
+      \     "type": "adapter",
+      \     "template": [
+      \       "import ApplicationAdapter from './application';",
+      \       "",
+      \       "export default ApplicationAdapter.extend({",
+      \       "});",
+      \     ],
+      \     "alternate": "app/serializers/{}.js"
+      \   },
+      \   "app/serializers/*.js": {
+      \     "type": "serializer",
+      \     "template": [
+      \       "import ApplicationSerializer from './application';",
+      \       "",
+      \       "export default ApplicationSerializer.extend({",
+      \       "});",
+      \     ],
+      \     "alternate": "app/models/{}.js"
+      \   },
+      \ },
       \}
