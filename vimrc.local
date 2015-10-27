@@ -30,6 +30,9 @@ nmap _ -
 " Insert a pry statement
 nmap <leader>bp orequire 'pry'; binding.pry<esc>^
 
+" Insert a js debugger
+nmap <leader>jd odebugger;<esc>^
+
 " Insert a pauseTest statement
 nmap <leader>pt oreturn pauseTest();<esc>:w<CR>
 
