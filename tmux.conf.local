@@ -20,9 +20,6 @@ bind-key C-a send-prefix
 bind-key C-b send-keys "tat && exit" "C-m"
 
 # mouse behavior
-setw -g mode-mouse on
-set-option -g mouse-select-pane on
-set-option -g mouse-resize-pane on
 set-option -s escape-time 0
 
 bind-key - split-window -v -c '#{pane_current_path}'
