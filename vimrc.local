@@ -12,6 +12,7 @@ let g:rspec_command = "Dispatch bin/rspec {spec}"
 set noerrorbells visualbell t_vb=
 
 autocmd VimResized * :wincmd =
+autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc setfiletype json
 
 command! Q q " Bind :Q to :q
 command! Qa qa " Bind :Qa to :qa
@@ -38,6 +39,16 @@ nmap <leader>pt oreturn pauseTest();<esc>:w<CR>
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+let g:rails_projections = {
+      \ "app/services/*.rb": {
+      \   "command": "service",
+      \   "template": "class {camelcase|capitalize|colons}\nend",
+      \   "test": [
+      \     "spec/services/{}_spec.rb"
+      \   ]
+      \ }
+      \}
 
 let g:projectionist_heuristics = {
       \ "spec/*": {
