@@ -12,7 +12,6 @@ let g:rspec_command = "Dispatch bin/rspec {spec}"
 set noerrorbells visualbell t_vb=
 
 autocmd VimResized * :wincmd =
-autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc setfiletype json
 
 command! Q q " Bind :Q to :q
 command! Qa qa " Bind :Qa to :qa
