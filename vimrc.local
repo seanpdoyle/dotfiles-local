@@ -101,6 +101,15 @@ let g:projectionist_heuristics = {
       \       "{{outlet}}",
       \     ]
       \   },
+      \   "app/mixins/*.js": {
+      \     "type": "mixin",
+      \     "template": [
+      \       "import Ember from 'ember';",
+      \       "",
+      \       "export default Ember.Mixin.create({",
+      \       "});",
+      \     ],
+      \   },
       \   "app/models/*.js": {
       \     "type": "model",
       \     "template": [
@@ -127,6 +136,16 @@ let g:projectionist_heuristics = {
       \       "import ApplicationSerializer from './application';",
       \       "",
       \       "export default ApplicationSerializer.extend({",
+      \       "});",
+      \     ],
+      \     "alternate": "app/models/{}.js"
+      \   },
+      \   "app/mirage/factories/*.js": {
+      \     "type": "factory",
+      \     "template": [
+      \       "import Mirage from 'ember-cli-mirage';",
+      \       "",
+      \       "export default Mirage.Factory.extend({",
       \       "});",
       \     ],
       \     "alternate": "app/models/{}.js"
