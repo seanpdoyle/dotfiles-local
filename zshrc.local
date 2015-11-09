@@ -32,3 +32,6 @@ export PATH="$PATH:/usr/local/lib/node_modules"
 source $(brew --prefix nvm)/nvm.sh
 
 export PATH="$HOME/.bin:$PATH"
+
+# added by travis gem
+[ -f /Users/seanpdoyle/.travis/travis.sh ] && source /Users/seanpdoyle/.travis/travis.sh
