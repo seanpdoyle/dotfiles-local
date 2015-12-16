@@ -1,5 +1,6 @@
 " Define bundles via GitHub repos
 
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'calebthompson/vim-whitewash'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ConradIrwin/vim-bracketed-paste'
@@ -8,6 +9,7 @@ Plug 'dag/vim2hs'
 Plug 'ervandew/supertab'
 Plug 'garbas/vim-snipmate'
 Plug 'jamestomasino/vim-writingsyntax'
+Plug 'joker1007/vim-ruby-heredoc-syntax'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'rking/ag.vim'

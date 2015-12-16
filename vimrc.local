@@ -28,7 +28,7 @@ map <Leader>i mmgg=G`m<CR>
 nmap _ -
 
 " Insert a pry statement
-nmap <leader>bp orequire 'pry'; binding.pry<esc>^
+nmap <leader>bp orequire "pry"; binding.pry<esc>^
 
 " Insert a js debugger
 nmap <leader>jd odebugger;<esc>^
@@ -38,6 +38,10 @@ nmap <leader>pt oreturn pauseTest();<esc>:w<CR>
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" bind Split Join to direction keys
+nmap sj :SplitjoinSplit<cr>
+nmap sk :SplitjoinJoin<cr>
 
 let g:rails_projections = {
       \ "app/services/*.rb": {
