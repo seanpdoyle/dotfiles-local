@@ -2,8 +2,6 @@
 
 mkdir -p $PROJECTS
 
-unsetopt flowcontrol
-
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
@@ -13,19 +11,13 @@ if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; 
   source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
-# added by travis gem
-[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
-
 eval "$(hub alias -s)"
 
-_not_inside_tmux() { [[ -z "$TMUX" ]] }
-
 ensure_tmux_is_running() {
-  if _not_inside_tmux; then
+  if [[ -z "$TMUX" ]]; then
     tat
   fi
 }
-
 ensure_tmux_is_running
 
 export PATH="$PATH:/usr/local/lib/node_modules"
