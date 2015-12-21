@@ -2,9 +2,11 @@
 
 mkdir -p $PROJECTS
 
+autoload -U promptinit && promptinit
+prompt pure
+
 # initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
+autoload -U compinit && compinit
 
 # Turn on ZSH syntax highlighting
 if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then

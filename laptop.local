@@ -4,6 +4,7 @@ npm_packages=(
   bower
   ember-cli
   phantomjs
+  pure-prompt
 )
 for package in $npm_packages; do
   npm -g install $package
@@ -14,3 +15,5 @@ brew tap Homebrew/bundle
 brew bundle --global
 
 boot2docker init
+
+curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/deploy/Scripts/install.sh | sh
