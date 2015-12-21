@@ -50,4 +50,4 @@ directory_name(){
 }
 
 NEWLINE=$'\n'
-PS1="${NEWLINE}$(rb_prompt) in $(directory_name) $(git_dirty)$(need_push)${NEWLINE}› "
+PS1=$'${NEWLINE}$(rb_prompt) in $(directory_name) $(git_dirty)$(need_push)${NEWLINE}› '
