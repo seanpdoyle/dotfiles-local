@@ -3,6 +3,7 @@
 npm_packages=(
   bower
   ember-cli
+  react-native-cli
   phantomjs
   pure-prompt
 )
