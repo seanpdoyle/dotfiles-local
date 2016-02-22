@@ -4,7 +4,23 @@ highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
 let g:syntastic_html_checkers = []
-let g:rspec_command = "Dispatch bin/rspec {spec}"
+let g:rspec_command = "Dispatch rspec {spec}"
+
+let g:ruby_heredoc_syntax_filetypes = {
+  \ "yaml": {
+  \   "start": "YAML",
+  \ },
+  \ "json": {
+  \   "start": "JSON",
+  \ },
+  \ "xml": {
+  \   "start": "XML",
+  \ },
+\}
+
+let g:splitjoin_trailing_comma = 1
+let g:splitjoin_ruby_curly_braces = 0
+let g:splitjoin_ruby_hanging_args = 0
 
 " Terminal.app keeps having a notification and "jumping" on the dock from Vim's
 " bells, and this disables terminal Vim's bells.
@@ -89,6 +105,9 @@ let g:projectionist_heuristics = {
       \     ],
       \     "alternate": "app/templates/{}.hbs"
       \   },
+      \   "app/templates/components/*.hbs": {
+      \     "alternate": "tests/integration/components/{}-test.js"
+      \   },
       \   "app/components/*.js": {
       \     "type": "component",
       \     "template": [
@@ -153,6 +172,12 @@ let g:projectionist_heuristics = {
       \       "});",
       \     ],
       \     "alternate": "app/models/{}.js"
+      \   },
+      \   "tests/unit/models/*-test.js": {
+      \     "alternate": "app/models/{}.js"
+      \   },
+      \   "tests/integration/components/*-test.js": {
+      \     "alternate": "app/components/{}.js"
       \   },
       \ },
       \}
