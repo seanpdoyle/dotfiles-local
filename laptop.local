@@ -15,8 +15,6 @@ brew tap Homebrew/bundle
 
 brew bundle --global
 
-boot2docker init
-
 # Install Alcatraz
 curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/deploy/Scripts/install.sh | sh
 

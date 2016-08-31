@@ -15,13 +15,6 @@ fi
 
 eval "$(hub alias -s)"
 
-ensure_tmux_is_running() {
-  if [[ -z "$TMUX" ]]; then
-    tat
-  fi
-}
-# ensure_tmux_is_running
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
@@ -30,3 +23,4 @@ export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 
 # added by travis gem
 [ -f /Users/seanpdoyle/.travis/travis.sh ] && source /Users/seanpdoyle/.travis/travis.sh
+eval "$(rbenv init - --no-rehash)"
