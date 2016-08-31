@@ -46,6 +46,7 @@ brew 'solr'
 brew 'tree'
 brew 'v8'
 brew 'watchman'
+brew 'wget'
 brew 'zsh-syntax-highlighting'
 
 brew 'nviennot/tmate/tmate'

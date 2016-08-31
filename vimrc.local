@@ -4,7 +4,8 @@ highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
 let g:syntastic_html_checkers = []
-let g:rspec_command = "Dispatch rspec {spec}"
+
+let test#strategy = "dispatch"
 
 let g:ruby_heredoc_syntax_filetypes = {
   \ "yaml": {
@@ -27,13 +28,12 @@ let g:splitjoin_ruby_hanging_args = 0
 " http://vim.wikia.com/wiki/Disable_beeping
 set noerrorbells visualbell t_vb=
 
+autocmd BufRead,BufNewFile *.es6 set filetype=js
 autocmd VimResized * :wincmd =
 
 command! Q q " Bind :Q to :q
 command! Qa qa " Bind :Qa to :qa
 command! W w " Bind :W to :w
-
-map <Leader><CR> :let g:rspec_command = "Dispatch bundle exec rspec {spec}"<CR>
 
 map <Leader>tq :!./node_modules/.bin/qunit -c index.js -t %<CR>
 
@@ -44,10 +44,10 @@ map <Leader>i mmgg=G`m<CR>
 nmap _ -
 
 " Insert a pry statement
-nmap <leader>bp orequire "pry"; binding.pry<esc>^
+nmap <leader>bp orequire "pry"; ::Kernel.binding.pry<esc>^
 
 " Insert a js debugger
-nmap <leader>jd odebugger;<esc>^
+nmap <leader>jd odebugger;<esc>^<esc>:w<CR>
 
 " Insert a pauseTest statement
 nmap <leader>pt oreturn pauseTest();<esc>:w<CR>
@@ -58,6 +58,23 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " bind Split Join to direction keys
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
+
+" Stolen from Keith Smiley
+" https://github.com/keith/dotfiles/commit/20f98a645dd9ebcd24fa96d3aac0e9fe34a21a6a
+" https://www.reddit.com/r/vim/comments/4jy1mh/slightly_more_subltle_n_and_n_behavior/
+" Keep search matches in the middle of the window unless the next match is in
+" the same viewport
+function! s:NextAndCenter(cmd)
+  let view = winsaveview()
+  execute "normal! " . a:cmd
+
+  if view.topline != winsaveview().topline
+    normal! zzzv
+  endif
+endfunction
+
+nnoremap <silent> n :call <SID>NextAndCenter('n')<CR>
+nnoremap <silent> N :call <SID>NextAndCenter('N')<CR>
 
 let g:rails_projections = {
       \ "app/services/*.rb": {
@@ -152,6 +169,15 @@ let g:projectionist_heuristics = {
       \       "});",
       \     ],
       \     "alternate": "app/serializers/{}.js"
+      \   },
+      \   "app/services/*.js": {
+      \     "type": "service",
+      \     "template": [
+      \       "import Ember from 'Ember';",
+      \       "",
+      \       "export default Ember.Service.extend({",
+      \       "});",
+      \     ],
       \   },
       \   "app/serializers/*.js": {
       \     "type": "serializer",
