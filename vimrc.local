@@ -3,25 +3,7 @@ colorscheme github
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
-let g:syntastic_html_checkers = []
-
 let test#strategy = "dispatch"
-
-let g:ruby_heredoc_syntax_filetypes = {
-  \ "yaml": {
-  \   "start": "YAML",
-  \ },
-  \ "json": {
-  \   "start": "JSON",
-  \ },
-  \ "xml": {
-  \   "start": "XML",
-  \ },
-\}
-
-let g:splitjoin_trailing_comma = 1
-let g:splitjoin_ruby_curly_braces = 0
-let g:splitjoin_ruby_hanging_args = 0
 
 " Terminal.app keeps having a notification and "jumping" on the dock from Vim's
 " bells, and this disables terminal Vim's bells.
@@ -35,29 +17,14 @@ command! Q q " Bind :Q to :q
 command! Qa qa " Bind :Qa to :qa
 command! W w " Bind :W to :w
 
-map <Leader>tq :!./node_modules/.bin/qunit -c index.js -t %<CR>
-
 nnoremap <Leader>- :wincmd _<CR>:wincmd \|<CR>
 nnoremap <Leader>= :wincmd =<CR>
 
 map <Leader>i mmgg=G`m<CR>
 nmap _ -
 
-" Insert a pry statement
-nmap <leader>bp orequire "pry"; ::Kernel.binding.pry<esc>^
-
-" Insert a js debugger
-nmap <leader>jd odebugger;<esc>^<esc>:w<CR>
-
-" Insert a pauseTest statement
-nmap <leader>pt oreturn pauseTest();<esc>:w<CR>
-
 " bind K to grep word under cursor
 nnoremap K :Ag! "\b<C-R><C-W>\b"<CR>
-
-" bind Split Join to direction keys
-nmap sj :SplitjoinSplit<cr>
-nmap sk :SplitjoinJoin<cr>
 
 " Move up and down by visible lines if current line is wrapped
 nmap j gj
@@ -79,136 +46,3 @@ endfunction
 
 nnoremap <silent> n :call <SID>NextAndCenter('n')<CR>
 nnoremap <silent> N :call <SID>NextAndCenter('N')<CR>
-
-let g:rails_projections = {
-      \ "app/services/*.rb": {
-      \   "command": "service",
-      \   "template": "class {camelcase|capitalize|colons}\nend",
-      \   "test": [
-      \     "spec/services/{}_spec.rb"
-      \   ]
-      \ }
-      \}
-
-let g:projectionist_heuristics = {
-      \ "spec/*": {
-      \   "spec/support/api/schemas/*.json": {
-      \     "type": "json",
-      \     "template": [
-      \       "{",
-      \       "  \"type\": \"object\",",
-      \       "  \"required\": [",
-      \       "  ],",
-      \       "  \"properties\": {",
-      \       "  },",
-      \       "  \"additionalProperties\": false",
-      \       "}",
-      \     ]
-      \   }
-      \ },
-      \ "ember-cli-build.js": {
-      \   "app/routes/*.js": {
-      \     "type": "route",
-      \     "template": [
-      \       "import Ember from 'ember';",
-      \       "",
-      \       "export default Ember.Route.extend({",
-      \       "});",
-      \     ],
-      \     "alternate": "app/templates/{}.hbs"
-      \   },
-      \   "app/controllers/*.js": {
-      \     "type": "controller",
-      \     "template": [
-      \       "import Ember from 'ember';",
-      \       "",
-      \       "export default Ember.Controller.extend({",
-      \       "});",
-      \     ],
-      \     "alternate": "app/templates/{}.hbs"
-      \   },
-      \   "app/templates/components/*.hbs": {
-      \     "alternate": "tests/integration/components/{}-test.js"
-      \   },
-      \   "app/components/*.js": {
-      \     "type": "component",
-      \     "template": [
-      \       "import Ember from 'ember';",
-      \       "",
-      \       "export default Ember.Component.extend({",
-      \       "});",
-      \     ],
-      \     "alternate": "app/templates/components/{}.hbs"
-      \   },
-      \   "app/templates/*.js": {
-      \     "type": "template",
-      \     "template": [
-      \       "{{outlet}}",
-      \     ]
-      \   },
-      \   "app/mixins/*.js": {
-      \     "type": "mixin",
-      \     "template": [
-      \       "import Ember from 'ember';",
-      \       "",
-      \       "export default Ember.Mixin.create({",
-      \       "});",
-      \     ],
-      \   },
-      \   "app/models/*.js": {
-      \     "type": "model",
-      \     "template": [
-      \       "import DS from 'ember-data';",
-      \       "",
-      \       "export default DS.Model.extend({",
-      \       "});",
-      \     ],
-      \     "alternate": "app/adapters/{}.js"
-      \   },
-      \   "app/adapters/*.js": {
-      \     "type": "adapter",
-      \     "template": [
-      \       "import ApplicationAdapter from './application';",
-      \       "",
-      \       "export default ApplicationAdapter.extend({",
-      \       "});",
-      \     ],
-      \     "alternate": "app/serializers/{}.js"
-      \   },
-      \   "app/services/*.js": {
-      \     "type": "service",
-      \     "template": [
-      \       "import Ember from 'Ember';",
-      \       "",
-      \       "export default Ember.Service.extend({",
-      \       "});",
-      \     ],
-      \   },
-      \   "app/serializers/*.js": {
-      \     "type": "serializer",
-      \     "template": [
-      \       "import ApplicationSerializer from './application';",
-      \       "",
-      \       "export default ApplicationSerializer.extend({",
-      \       "});",
-      \     ],
-      \     "alternate": "app/models/{}.js"
-      \   },
-      \   "app/mirage/factories/*.js": {
-      \     "type": "factory",
-      \     "template": [
-      \       "import Mirage from 'ember-cli-mirage';",
-      \       "",
-      \       "export default Mirage.Factory.extend({",
-      \       "});",
-      \     ],
-      \     "alternate": "app/models/{}.js"
-      \   },
-      \   "tests/unit/models/*-test.js": {
-      \     "alternate": "app/models/{}.js"
-      \   },
-      \   "tests/integration/components/*-test.js": {
-      \     "alternate": "app/components/{}.js"
-      \   },
-      \ },
-      \}
