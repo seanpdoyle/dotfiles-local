@@ -1,6 +1,5 @@
 " Define bundles via GitHub repos
 
-Plug 'AndrewRadev/splitjoin.vim'
 Plug 'calebthompson/vim-whitewash'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ConradIrwin/vim-bracketed-paste'
