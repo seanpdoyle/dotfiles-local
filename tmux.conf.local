@@ -1,8 +1,10 @@
 bind-key r source-file ~/.tmux.conf\; display-message "~/.tmux.conf reloaded"
 
-# Simplify status bar display.
-set-option -g status-left '[#S]'
-set-option -g status-right "#(battery -t -g black -a)  #(date '+%a, %b %d - %I:%M') "
+# Simplify status bar display, unless we're in a TMATE session
+is_not_tmate="echo $TMUX | grep -vi tmate"
+if-shell "$is_not_tmate"  \
+  "set-option -g status-left '[#S]'; \
+   set-option -g status-right \"#(battery -t -g black -a)  #(date '+%a, %b %d - %I:%M') \""
 
 is_vim='echo "#{pane_current_command}" | grep -iqE "(^|\/)g?(view|n?vim?)(diff)?$"'
 # smart pane switching with awareness of vim splits
