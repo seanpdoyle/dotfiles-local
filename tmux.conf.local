@@ -1,8 +1,8 @@
 bind-key r source-file ~/.tmux.conf\; display-message "~/.tmux.conf reloaded"
 
 # Simplify status bar display, unless we're in a TMATE session
-is_not_tmate="echo $TMUX | grep -vi tmate"
-if-shell "$is_not_tmate"  \
+is_tmate="$(echo $TMUX | grep -i tmate)"
+if-shell "$is_tmate -z"  \
   "set-option -g status-left '[#S]'; \
    set-option -g status-right \"#(battery -t -g black -a)  #(date '+%a, %b %d - %I:%M') \""
 
