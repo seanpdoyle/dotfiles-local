@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# tmux fixes: https://github.com/junegunn/fzf/issues/201
+alias clear='clear; tmux clear-history'
 alias reload!='source ~/.zshrc'
 alias grep='grep --color'
 alias :q='exit'
