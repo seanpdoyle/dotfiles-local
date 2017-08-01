@@ -2,6 +2,8 @@
 
 mkdir -p $PROJECTS
 
+zstyle ':completion:*' rehash true
+
 autoload -U promptinit && promptinit
 prompt pure
 

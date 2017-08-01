@@ -26,6 +26,11 @@ nmap _ -
 " bind K to grep word under cursor
 nnoremap K :Ag! "\b<C-R><C-W>\b"<CR>
 
+" Override thoughtbot completion direction
+inoremap <S-Tab> <C-P>C
+" Integrate with FZF
+nnoremap <C-P> :Files<CR>
+
 " Move up and down by visible lines if current line is wrapped
 nmap j gj
 nmap k gk
