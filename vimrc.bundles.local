@@ -1,9 +1,12 @@
 " Define bundles via GitHub repos
 
 Plug 'calebthompson/vim-whitewash'
+Plug 'c-brenn/phoenix.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'croaky/vim-colors-github'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'elixir-lang/vim-elixir'
 Plug 'ervandew/supertab'
 Plug 'jamestomasino/vim-writingsyntax'
 Plug 'joker1007/vim-ruby-heredoc-syntax'
