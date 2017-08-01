@@ -22,3 +22,5 @@
   account = thoughtbot
 [hub]
   protocol = git
+[web]
+  browser = open
