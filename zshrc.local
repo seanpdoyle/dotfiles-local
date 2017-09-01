@@ -25,4 +25,3 @@ export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 
 # added by travis gem
 [ -f /Users/seanpdoyle/.travis/travis.sh ] && source /Users/seanpdoyle/.travis/travis.sh
-eval "$(rbenv init - --no-rehash)"
