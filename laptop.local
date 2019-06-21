@@ -1,11 +1,8 @@
 #!/bin/sh
 
 npm_packages=(
-  bower
-  ember-cli
-  react-native-cli
-  phantomjs
   pure-prompt
+  typescript
 )
 for package in $npm_packages; do
   npm -g install $package
@@ -14,9 +11,3 @@ done
 brew tap Homebrew/bundle
 
 brew bundle --global
-
-# Install Alcatraz
-curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/deploy/Scripts/install.sh | sh
-
-# Install NVM
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash

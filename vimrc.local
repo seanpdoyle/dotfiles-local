@@ -22,9 +22,10 @@ nnoremap <Leader>= :wincmd =<CR>
 
 map <Leader>i mmgg=G`m<CR>
 nmap _ -
+map Q <Nop>
 
-" bind K to grep word under cursor
-nnoremap K :Ag! "\b<C-R><C-W>\b"<CR>
+" bind leader k to grep word under cursor
+nnoremap <Leader>k :Ag! "\b<C-R><C-W>\b"<CR>
 
 " Override thoughtbot completion direction
 inoremap <S-Tab> <C-P>C

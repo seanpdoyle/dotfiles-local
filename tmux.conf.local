@@ -1,5 +1,7 @@
 bind-key r source-file ~/.tmux.conf\; display-message "~/.tmux.conf reloaded"
 
+set-option -g default-command "reattach-to-user-namespace -l ${SHELL}"
+
 # Simplify status bar display
 set-option -g status-left '[#S]'
 set-option -g status-right "#(battery -t -g black -a)  #(date '+%a, %b %d - %I:%M') "
@@ -13,7 +15,7 @@ bind-key -n C-l if-shell "$is_vim" "send-keys C-l" "select-pane -R"
 bind-key -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
 
 # You probably already put this in
-set -g prefix C-a
+set-option -g prefix C-a
 
 unbind-key C-b
 bind-key C-a send-prefix

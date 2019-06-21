@@ -17,11 +17,10 @@ fi
 
 eval "$(hub alias -s)"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-
-export PATH="$HOME/.bin:$PATH"
-export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
-
 # added by travis gem
 [ -f /Users/seanpdoyle/.travis/travis.sh ] && source /Users/seanpdoyle/.travis/travis.sh
+
+export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.fastlane/bin:$PATH"
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
+export PATH=".git/safe/../../node_modules/.bin:$PATH"

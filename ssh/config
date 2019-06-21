@@ -2,3 +2,13 @@ Host *
  AddKeysToAgent yes
  UseKeychain yes
  IdentityFile ~/.ssh/id_rsa
+Host ssh.ksr.io
+  User ksr
+  ForwardAgent yes
+
+Host *.amazonaws.com *.ec2.internal *.aws.ksr.io
+  ProxyCommand ssh ksr@ssh.ksr.io -W %h:%p
+  User ksr
+Host airlock.kickstarter.com
+  User ksr
+  ForwardAgent yes
