@@ -1,5 +1,63 @@
 let g:projectionist_heuristics = {
+      \ "app/components/*": {
+      \   "app/components/*_component.rb": {
+      \     "type": "source",
+      \     "template": [
+      \       "class {basename|capitalize}Component < ApplicationComponent",
+      \       "  def initialize(*)",
+      \       "  end",
+      \       "end",
+      \     ]
+      \   },
+      \ },
+      \ "app/models/*": {
+      \   "app/models/*.rb": {
+      \     "type": "source",
+      \     "template": [
+      \       "class {basename|camelcase|capitalize} < ApplicationRecord",
+      \       "end",
+      \     ]
+      \   },
+      \ },
+      \ "app/javascript/*": {
+      \   "app/javascript/controllers/*_controller.js": {
+      \     "type": "source",
+      \     "template": [
+      \       "import {open} Controller {close} from \"stimulus\"",
+      \       "",
+      \       "export default class extends Controller {",
+      \       "  connect() {",
+      \       "  }",
+      \       "",
+      \       "  disconnect() {",
+      \       "  }",
+      \       "}",
+      \     ],
+      \   },
+      \ },
+      \ "test/*": {
+      \   "test/system/*.rb": {
+      \     "type": "test",
+      \     "template": [
+      \       "require \"application_system_test_case\"",
+      \       "",
+      \       "class {basename|colons|camelcase|capitalize}Test < ApplicationSystemTestCase",
+      \       "  test \"{blank}\"",
+      \       "  end",
+      \       "end",
+      \     ],
+      \   }
+      \ },
       \ "spec/*": {
+      \   "spec/system/*_spec.rb": {
+      \     "type": "test",
+      \     "template": [
+      \       "require \"rails_helper\"",
+      \       "",
+      \       "RSpec.describe \"{basename|blank|capitalize}\", type: :system do",
+      \       "end",
+      \     ],
+      \   },
       \   "spec/support/api/schemas/*.json": {
       \     "type": "json",
       \     "template": [
