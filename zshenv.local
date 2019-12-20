@@ -3,6 +3,3 @@ export PROJECTS=~/src
 export PGHOST=localhost
 export ANDROID_HOME="/usr/local/opt/android-sdk"
 export FZF_DEFAULT_COMMAND='ag --path-to-ignore ~/.agignore --hidden -t -g ""'
-export HUSKY_SKIP_INSTALL=true
-
-ulimit -n 2048

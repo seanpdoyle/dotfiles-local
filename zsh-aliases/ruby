@@ -2,5 +2,5 @@
 
 alias be='bundle exec'
 alias rk='rake'
-alias fs='pkill -f puma; foreman start'
+alias fs='pkill -f puma; heroku local'
 alias clean='rake db:{drop,create,migrate,seed} dev:prime db:test:prepare'

@@ -3,7 +3,6 @@
   email = sean.p.doyle24@gmail.com
 [alias]
   rebae = rebase
-test
 [color]
   diff = auto
   status = auto
