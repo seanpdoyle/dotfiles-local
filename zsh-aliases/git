@@ -12,5 +12,7 @@ alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status -sb'
 alias grc='git rebase --continue'
-alias gri='git -c commit.verbose=true rebase --interactive origin/master'
+alias gri='git up --interactive --keep-empty'
+alias groot='git rebase --interactive --root --keep-empty'
 alias gwip='git add -A && git commit -am "WIP"'
+alias gpr="git log HEAD...$(git symbolic-ref --short refs/remotes/origin/HEAD) --reverse --format='%s%n===%n%n%b'"
