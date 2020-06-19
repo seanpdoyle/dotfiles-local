@@ -1,5 +1,12 @@
 let g:projectionist_heuristics = {
       \ "app/components/*": {
+      \   "app/components/application_component.rb": {
+      \     "type": "source",
+      \     "template": [
+      \       "class ApplicationComponent < ActionView::Component::Base",
+      \       "end",
+      \     ],
+      \   },
       \   "app/components/*_component.rb": {
       \     "type": "source",
       \     "template": [
@@ -7,16 +14,32 @@ let g:projectionist_heuristics = {
       \       "  def initialize(*)",
       \       "  end",
       \       "end",
-      \     ]
+      \     ],
       \   },
       \ },
       \ "app/models/*": {
+      \   "app/models/application_record.rb": {
+      \     "type": "source",
+      \     "template": [
+      \       "class ApplicationRecord < ActiveRecord::Base",
+      \       "end",
+      \     ],
+      \   },
       \   "app/models/*.rb": {
       \     "type": "source",
       \     "template": [
       \       "class {basename|camelcase|capitalize} < ApplicationRecord",
       \       "end",
-      \     ]
+      \     ],
+      \   },
+      \ },
+      \ "app/controllers/*": {
+      \   "app/controllers/*.rb": {
+      \     "type": "source",
+      \     "template": [
+      \       "class {basename|camelcase|capitalize} < ApplicationController",
+      \       "end",
+      \     ],
       \   },
       \ },
       \ "app/javascript/*": {
@@ -36,17 +59,28 @@ let g:projectionist_heuristics = {
       \   },
       \ },
       \ "test/*": {
-      \   "test/system/*.rb": {
+      \   "test/system/*_test.rb": {
       \     "type": "test",
       \     "template": [
       \       "require \"application_system_test_case\"",
       \       "",
       \       "class {basename|colons|camelcase|capitalize}Test < ApplicationSystemTestCase",
-      \       "  test \"{blank}\"",
+      \       "  test \"{blank}\" do",
       \       "  end",
       \       "end",
       \     ],
-      \   }
+      \   },
+      \   "test/controllers/*.rb": {
+      \     "type": "test",
+      \     "template": [
+      \       "require \"test_helper\"",
+      \       "",
+      \       "class {basename|colons|camelcase|capitalize} < ActionDispatch::IntegrationTest",
+      \       "  test \"{blank}\" do",
+      \       "  end",
+      \       "end",
+      \     ],
+      \   },
       \ },
       \ "spec/*": {
       \   "spec/system/*_spec.rb": {
