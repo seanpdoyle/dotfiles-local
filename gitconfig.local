@@ -1,8 +1,13 @@
 [user]
   name = Sean Doyle
   email = sean.p.doyle24@gmail.com
+[push]
+  autoSetupRemote = true
+[pull]
+  rebase = false
 [alias]
   rebae = rebase
+  proselog = log --format="##\\ %s%n%n%b%n---%n" --invert-grep --grep 'SKIP' --grep 'GENERATED' --reverse
 [color]
   diff = auto
   status = auto

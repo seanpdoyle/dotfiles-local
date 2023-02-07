@@ -1,5 +1,12 @@
 # your project folder that we can `c [tab]` to
-export PROJECTS=~/src
+export PROJECTS=~/Work
 export PGHOST=localhost
-export ANDROID_HOME="/usr/local/opt/android-sdk"
+export ANDROID_HOME="$HOME/Library/Android/sdk/"
+# export JAVA_HOME=$(brew --prefix java)
 export FZF_DEFAULT_COMMAND='ag --path-to-ignore ~/.agignore --hidden -t -g ""'
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY="YES"
+export RUBY_DEBUG_LOG_LEVEL="ERROR"
+
+if [ -f ~/.zshenv.secret.local ]; then
+  source ~/.zshenv.secret.local
+fi

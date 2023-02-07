@@ -2,4 +2,4 @@
 
 set -e
 
-git diff origin/master --name-only | grep "_spec.rb\|test.rb" | xargs bin/rails test
+git diff origin/main --name-only | grep "_spec.rb\|test.rb" | xargs bin/rails test

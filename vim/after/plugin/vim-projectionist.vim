@@ -3,18 +3,22 @@ let g:projectionist_heuristics = {
       \   "app/components/application_component.rb": {
       \     "type": "source",
       \     "template": [
-      \       "class ApplicationComponent < ActionView::Component::Base",
+      \       "class ApplicationComponent < ViewComponent::Base",
       \       "end",
       \     ],
       \   },
       \   "app/components/*_component.rb": {
       \     "type": "source",
       \     "template": [
-      \       "class {basename|capitalize}Component < ApplicationComponent",
+      \       "class {basename|camelcase|capitalize}Component < ApplicationComponent",
       \       "  def initialize(*)",
       \       "  end",
       \       "end",
       \     ],
+      \     "alternate": "app/components/{}.html.erb"
+      \   },
+      \   "app/components/*.html.erb": {
+      \     "alternate": "app/components/{}.rb"
       \   },
       \ },
       \ "app/models/*": {
@@ -25,10 +29,33 @@ let g:projectionist_heuristics = {
       \       "end",
       \     ],
       \   },
+      \   "app/models/concerns/*.rb": {
+      \     "type": "source",
+      \     "template": [
+      \       "module {basename|camelcase|capitalize}",
+      \       "  extend ActiveSupport::Concern",
+      \       "",
+      \       "  included do",
+      \       "  end",
+      \       "",
+      \       "  class_methods do",
+      \       "  end",
+      \       "end",
+      \     ],
+      \   },
       \   "app/models/*.rb": {
       \     "type": "source",
       \     "template": [
       \       "class {basename|camelcase|capitalize} < ApplicationRecord",
+      \       "end",
+      \     ],
+      \   },
+      \ },
+      \ "app/jobs/*": {
+      \   "app/jobs/*.rb": {
+      \     "type": "source",
+      \     "template": [
+      \       "class {basename|camelcase|capitalize} < ApplicationJob",
       \       "end",
       \     ],
       \   },
@@ -41,12 +68,33 @@ let g:projectionist_heuristics = {
       \       "end",
       \     ],
       \   },
+      \   "app/controllers/concerns/*.rb": {
+      \     "type": "source",
+      \     "template": [
+      \       "module {basename|camelcase|capitalize}",
+      \       "  extend ActiveSupport::Concern",
+      \       "",
+      \       "  included do",
+      \       "  end",
+      \       "",
+      \       "  class_methods do",
+      \       "  end",
+      \       "end",
+      \     ],
+      \   },
+      \   "app/mailers/*.rb": {
+      \     "type": "source",
+      \     "template": [
+      \       "class {basename|camelcase|capitalize} < ApplicationMailer",
+      \       "end",
+      \     ],
+      \   },
       \ },
       \ "app/javascript/*": {
       \   "app/javascript/controllers/*_controller.js": {
       \     "type": "source",
       \     "template": [
-      \       "import {open} Controller {close} from \"stimulus\"",
+      \       "import {open} Controller {close} from \"@hotwired/stimulus\"",
       \       "",
       \       "export default class extends Controller {",
       \       "  connect() {",
@@ -81,6 +129,39 @@ let g:projectionist_heuristics = {
       \       "end",
       \     ],
       \   },
+      \   "test/integration/*.rb": {
+      \     "type": "test",
+      \     "template": [
+      \       "require \"test_helper\"",
+      \       "",
+      \       "class {basename|colons|camelcase|capitalize} < ActionDispatch::IntegrationTest",
+      \       "  test \"{blank}\" do",
+      \       "  end",
+      \       "end",
+      \     ],
+      \   },
+      \   "test/jobs/*.rb": {
+      \     "type": "test",
+      \     "template": [
+      \       "require \"test_helper\"",
+      \       "",
+      \       "class {basename|colons|camelcase|capitalize} < ActiveJob::TestCase",
+      \       "  test \"{blank}\" do",
+      \       "  end",
+      \       "end",
+      \     ],
+      \   },
+      \   "test/models/*.rb": {
+      \     "type": "test",
+      \     "template": [
+      \       "require \"test_helper\"",
+      \       "",
+      \       "class {basename|colons|camelcase|capitalize} < ActiveSupport::TestCase",
+      \       "  test \"{blank}\" do",
+      \       "  end",
+      \       "end",
+      \     ],
+      \   },
       \ },
       \ "spec/*": {
       \   "spec/system/*_spec.rb": {
@@ -89,6 +170,42 @@ let g:projectionist_heuristics = {
       \       "require \"rails_helper\"",
       \       "",
       \       "RSpec.describe \"{basename|blank|capitalize}\", type: :system do",
+      \       "end",
+      \     ],
+      \   },
+      \   "spec/models/*_spec.rb": {
+      \     "type": "test",
+      \     "template": [
+      \       "require \"rails_helper\"",
+      \       "",
+      \       "RSpec.describe {basename|colons|camelcase|capitalize}, type: :model do",
+      \       "end",
+      \     ],
+      \   },
+      \   "spec/requests/*_spec.rb": {
+      \     "type": "test",
+      \     "template": [
+      \       "require \"rails_helper\"",
+      \       "",
+      \       "RSpec.describe \"{basename|colons|camelcase|capitalize}\", type: :request do",
+      \       "end",
+      \     ],
+      \   },
+      \   "spec/mailers/*_spec.rb": {
+      \     "type": "test",
+      \     "template": [
+      \       "require \"rails_helper\"",
+      \       "",
+      \       "RSpec.describe \"{basename|colons|camelcase|capitalize}\", type: :mailer do",
+      \       "end",
+      \     ],
+      \   },
+      \   "spec/components/*_spec.rb": {
+      \     "type": "test",
+      \     "template": [
+      \       "require \"rails_helper\"",
+      \       "",
+      \       "RSpec.describe \"{basename|colons|camelcase|capitalize}\", type: :component do",
       \       "end",
       \     ],
       \   },

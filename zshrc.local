@@ -16,7 +16,9 @@ if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; 
 fi
 
 eval "$(hub alias -s)"
+eval "$(work init -)"
 
 export PATH="$HOME/.bin:$PATH"
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 export PATH=".git/safe/../../node_modules/.bin:$PATH"
+export PATH="$(brew --prefix openjdk)/bin/:$PATH"

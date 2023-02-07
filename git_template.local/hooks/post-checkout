@@ -1,6 +1,6 @@
 #!/bin/sh
 
-[ -f Gemfile ] && bundle install > /dev/null &
+# [ -f Gemfile ] && bundle install > /dev/null &
 
 # if [ -f db/schema.rb ]; then
 #   if [ -f bin/rake ]; then

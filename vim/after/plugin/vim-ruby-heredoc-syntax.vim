@@ -1,4 +1,7 @@
 let g:ruby_heredoc_syntax_filetypes = {
+  \ "csv": {
+  \   "start": "CSV",
+  \ },
   \ "yaml": {
   \   "start": "YAML",
   \ },
